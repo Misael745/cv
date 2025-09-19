@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/cv.css">
 </head>
 <body>
-  <div class="container my-4">
+  <div class="container my-4" id="cv-content">
     <div class="row">
       <!-- Columna izquierda -->
       <aside class="col-md-4 sidebar text-center mb-4 mb-md-0">
@@ -53,12 +53,12 @@
         <section class="mt-4 text-start">
           <h2 class="h5 text-primary">Certificaciones</h2>
           <ul>
-            <li>CCNAV7: Introduction to Networks</li>
-            <li>CCNAv7: Switching,Routing, and Wireless Essentials</li>
+            <li><a href="#" class="btn-certificado" data-url="certificados/CCNA_INTRODUCTION.pdf" data-nombre="CCNA_INTRODUCTION.pdf">CCNAV7: Introduction to Networks</a></li>
+            <li><a href="#" class="btn-certificado" data-url="certificados/CCNA_Routing.pdf" data-nombre="CCNA_Routing.pdf">CCNAv7: Switching, Routing, and Wireless Essentials</a></li>
           </ul>
         </section>
 
-        <!-- Idiomas con barra de progreso en línea -->
+        <!-- Idiomas -->
         <section class="mt-4 text-start">
           <h2 class="h5 text-primary">Idiomas</h2>
           <div class="language-progress">
@@ -71,7 +71,7 @@
             <div class="lang-item">
               <span class="lang-name">Inglés</span>
               <div class="progress flex-grow-1" style="height:10px;">
-                <div class="progress-bar" style="width:60%;" data-color="#198754"></div>
+                <div class="progress-bar" style="width:50%;" data-color="#198754"></div>
               </div>
             </div>
           </div>
@@ -129,7 +129,7 @@
           </ul>
         </section>
 
-        <!-- Lenguajes con barras circulares -->
+        <!-- Lenguajes con círculos -->
         <section class="mb-4">
           <h2 class="h4 text-primary">Lenguajes</h2>
           <div class="skills-container d-flex flex-wrap gap-3 justify-content-start">
@@ -155,10 +155,20 @@
             </div>
           </div>
         </section>
+
+        <!-- Botón descargar CV -->
+        <div class="text-center my-4">
+          <button id="download-cv" class="btn btn-primary">
+            <i class="bi bi-download"></i> Descargar CV
+          </button>
+        </div>
       </main>
     </div>
   </div>
 
+  <!-- Librerías para descargar PDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf/0.10.1/html2pdf.bundle.min.js"></script>
   <script src="js/cv.js"></script>
 </body>
 </html>
